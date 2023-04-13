@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Watchworth
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A bold idea to allow for subjective film preferences and allow connections to be made around film
 
 ## Available Scripts
 
