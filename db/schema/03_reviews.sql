@@ -11,5 +11,5 @@ CREATE TABLE reviews (
   dialogue VARCHAR(255) NOT NULL,
   character_desires VARCHAR(255) NOT NULL,
   theme VARCHAR(255) NOT NULL,
-  wokeness VARCHAR(255) NOT NULL,
+  wokeness VARCHAR(255) NOT NULL
 );
