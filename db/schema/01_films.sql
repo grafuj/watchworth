@@ -5,5 +5,6 @@ CREATE TABLE films (
   name VARCHAR(255) NOT NULL,
   director VARCHAR(255) NOT NULL,
   release_date VARCHAR(255) NOT NULL,
-  imdb_url VARCHAR(255) NOT NULL
+  imdb_url VARCHAR(255) NOT NULL,
+  genre VARCHAR(255) NOT NULL
 );

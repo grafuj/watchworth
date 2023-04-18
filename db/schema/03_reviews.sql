@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS reviews CASCADE;
+
+CREATE TABLE reviews (
+  id SERIAL PRIMARY KEY NOT NULL,
+  film_id INTEGER REFERENCES films(id) ON DELETE CASCADE,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  engagement VARCHAR(255) NOT NULL,
+  acting VARCHAR(255) NOT NULL,
+  plot_consistency VARCHAR(255) NOT NULL,
+  scene_choice VARCHAR(255) NOT NULL,
+  dialogue VARCHAR(255) NOT NULL,
+  character_desires VARCHAR(255) NOT NULL,
+  theme VARCHAR(255) NOT NULL,
+  wokeness VARCHAR(255) NOT NULL,
+);
