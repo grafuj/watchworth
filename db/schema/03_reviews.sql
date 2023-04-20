@@ -20,5 +20,5 @@ CREATE TABLE reviews (
   theme_score FLOAT(24) NOT NULL,
   suitability VARCHAR(255),
   suitability_score FLOAT(24) NOT NULL,
-  overall_score FLOAT(24) CHECK (my_float >= 0 AND my_float <= 10)
+  overall_score FLOAT(24) CHECK (overall_score >= 0 AND overall_score <= 10)
 );
