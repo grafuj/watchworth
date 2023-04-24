@@ -19,7 +19,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "db:reset": "node bin/resetdb.js",
     "local": "./node_modules/.bin/nodemon -L --ignore public/"
   },
   "eslintConfig": {
