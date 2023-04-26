@@ -2,7 +2,7 @@
 require('dotenv').config();
 
 // Web server config
-const sassMiddleware = require('./lib/sass-middleware');
+// const sassMiddleware = require('./lib/sass-middleware');
 const express = require('express');
 const morgan = require('morgan');
 const cookieSession =require('cookie-session')
@@ -22,14 +22,14 @@ app.use(cookieSession({
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
-app.use(
-  '/styles',
-  sassMiddleware({
-    source: __dirname + '/styles',
-    destination: __dirname + '/public/styles',
-    isSass: false, // false => scss, true => sass
-  })
-);
+// app.use(
+//   '/styles',
+//   sassMiddleware({
+//     source: __dirname + '/styles',
+//     destination: __dirname + '/public/styles',
+//     isSass: false, // false => scss, true => sass
+//   })
+// );
 
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
