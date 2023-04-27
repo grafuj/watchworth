@@ -42,11 +42,11 @@ const filmApiRoutes = require('./routes/films-api');
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
-app.use('/api/users', userApiRoutes);
-app.use('/api/passwords', passwordApiRoutes);
-app.use('/users', usersRoutes);
-app.use('/login', login);
-app.use('/logout', logout);
+app.use('/api/films', filmApiRoutes);
+// app.use('/api/passwords', passwordApiRoutes);
+// app.use('/users', usersRoutes);
+// app.use('/login', login);
+// app.use('/logout', logout);
 // Note: mount other resources here, using the same pattern above
 
 // Home page

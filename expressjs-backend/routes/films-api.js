@@ -7,11 +7,11 @@
 
 const express = require('express');
 const router  = express.Router();
-const userQueries = require('../db/queries/films');
+const filmQueries = require('../db/queries/filmQueries');
 
-//GET users
+//GET films
 router.get('/', (req, res) => {
-  userQueries.getUsers()
+  filmQueries.getFilms()
     .then(users => {
       res.render('users' , {users});
 
@@ -23,10 +23,10 @@ router.get('/', (req, res) => {
     });
 });
 
-//GET user/:id
+//GET film/:id
 router.get('/:id', (req, res) => {
   const id = req.params.id;
-  client.query('SELECT * FROM user  WHERE id = $1', [id])
+  client.query('SELECT * FROM films  WHERE id = $1', [id])
     .then((response) => {
       res.json(response.rows[0]);
     });
