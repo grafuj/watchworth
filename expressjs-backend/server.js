@@ -54,6 +54,7 @@ app.use('/api/films', filmApiRoutes);
 // Separate them into separate routes files (see above).
 
 app.get('/', (req, res) => {
+  console.log("here: testing where this appears")
   res.render("index");
 });
 
