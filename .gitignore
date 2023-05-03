@@ -23,6 +23,4 @@ yarn-error.log*
 
 .env
 expressjs-backend/node_modules/
-reactjs-frontend/node_modules/.cache/
 reactjs-frontend/node_modules/
-reactjs-frontend/node_modules/.cache/
