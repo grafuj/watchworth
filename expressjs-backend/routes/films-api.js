@@ -10,7 +10,7 @@ const router  = express.Router();
 const filmQueries = require('../db/queries/filmQueries');
 
 //GET films
-router.get('/', (req, res) => {
+router.get('/films', (req, res) => {
   filmQueries.getFilms()
     .then(users => {
       res.render('users' , {users});
@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
 });
 
 //GET film/:id
-router.get('/:id', (req, res) => {
+router.get('/films/:id', (req, res) => {
   const id = req.params.id;
   client.query('SELECT * FROM films  WHERE id = $1', [id])
     .then((response) => {
