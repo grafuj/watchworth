@@ -14,7 +14,6 @@ router.get('/films', (req, res) => {
   filmQueries.getFilms()
     .then(users => {
       res.render('users' , {users});
-
     })
     .catch(err => {
       res
@@ -26,9 +25,9 @@ router.get('/films', (req, res) => {
 //GET film/:id
 router.get('/films/:id', (req, res) => {
   const id = req.params.id;
-  client.query('SELECT * FROM films  WHERE id = $1', [id])
-    .then((response) => {
-      res.json(response.rows[0]);
+  filmQueries.getFilmById()
+    .then((film) => {
+      res.render('film:', {film});
     });
 });
 

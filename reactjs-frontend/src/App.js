@@ -20,7 +20,7 @@ function App() {
         const films = all[0].data;
         const users = all[1].data;
         const reviews = all[2].data;
-
+        console.log("films:", films, "users:", users, "reviews:", reviews);
         setState((prev) => ({ ...prev, films, users, reviews }));
       })
       .catch((error) => {
@@ -37,8 +37,7 @@ function App() {
             films={state.films}
             users={state.users}
             reviews={state.reviews}
-          />
-        }
+          />}
         >
 
         </Route>
