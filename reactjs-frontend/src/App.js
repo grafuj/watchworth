@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Routes, Route, BrowserRouter } from "react-router-dom"; //BrowserRouter
 import './App.css';
+import Dashboard from "./components/Dashboard";
+
 function App() {
   const [state, setState] = useState({
     folders: [],
