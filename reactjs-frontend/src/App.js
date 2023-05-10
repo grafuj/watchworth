@@ -13,13 +13,15 @@ function App() {
   useEffect(() => {
     Promise.all([
       axios.get("/api/films"),
-      axios.get("/api/users"),
-      axios.get("/api/reviews"),
+      // axios.get("/api/users"),
+      // axios.get("/api/reviews"),
     ])
       .then((all) => {
         const films = all[0].data;
-        const users = all[1].data;
-        const reviews = all[2].data;
+        // const users = all[1].data;
+        // const reviews = all[2].data;
+        const users = {id: "user"}
+        const reviews = {id: "review"}
         console.log("films:", films, "users:", users, "reviews:", reviews);
         setState((prev) => ({ ...prev, films, users, reviews }));
       })
