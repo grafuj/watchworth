@@ -10,7 +10,7 @@ const router  = express.Router();
 const filmQueries = require('../db/queries/filmQueries');
 
 //GET films
-router.get('/', (req, res) => {
+router.get('/films', (req, res) => {
   console.log("router get request for /films")
   filmQueries.getFilms()
     .then(films => {

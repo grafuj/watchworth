@@ -20,8 +20,8 @@ function App() {
         const films = all[0].data;
         // const users = all[1].data;
         // const reviews = all[2].data;
-        const users = {id: "user"}
-        const reviews = {id: "review"}
+        const users = {id: "user"} //remove once pages are made
+        const reviews = {id: "review"} //remove once pages are made
         console.log("films:", films, "users:", users, "reviews:", reviews);
         setState((prev) => ({ ...prev, films, users, reviews }));
       })
