@@ -8,7 +8,7 @@ const morgan = require('morgan');
 // const cookieSession =require('cookie-session')
 // const bodyParses = require('body-parser');
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.DB_PORT;
 const app = express();
 
 // app.use(cookieSession({
