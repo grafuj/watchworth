@@ -8,7 +8,7 @@ const morgan = require('morgan');
 // const cookieSession =require('cookie-session')
 // const bodyParses = require('body-parser');
 
-const PORT = process.env.DB_PORT;
+const PORT = 8080;
 const app = express();
 
 // app.use(cookieSession({
@@ -34,8 +34,8 @@ app.use(express.static('public'));
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
 const filmApiRoutes = require('./routes/films-api');
-// const passwordApiRoutes = require('./routes/passwords-api');
-// const usersRoutes = require('./routes/users');
+const userApiRoutes = require('./routes/users-api');
+const reviewApiRoutes = require('./routes/reviews-api');
 // const login = require('./routes/login')
 // const logout = require('./routes/logout')
 
@@ -43,8 +43,8 @@ const filmApiRoutes = require('./routes/films-api');
 // Note: Feel free to replace the example routes below with your own
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 app.use('/api/films', filmApiRoutes);
-// app.use('/api/passwords', passwordApiRoutes);
-// app.use('/users', usersRoutes);
+app.use('/api/reviews', reviewApiRoutes);
+app.use('/api/users', userApiRoutes);
 // app.use('/login', login);
 // app.use('/logout', logout);
 // Note: mount other resources here, using the same pattern above
