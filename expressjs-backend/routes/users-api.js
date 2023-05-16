@@ -7,14 +7,14 @@
 
 const express = require('express');
 const router  = express.Router();
-const filmQueries = require('../db/queries/filmQueries');
+const userQueries = require('../db/queries/userQueries');
 
 //GET films
 router.get('/', (req, res) => {
-  console.log("router get request for /films")
-  filmQueries.getFilms()
-    .then(films => {
-      res.render('films' , {films});
+  console.log("router get request for /users")
+  userQueries.getUsers()
+    .then(users => {
+      res.render('users' , {users});
     })
     .catch(err => {
       res
@@ -23,12 +23,12 @@ router.get('/', (req, res) => {
     });
 });
 
-//GET film/:id
-router.get('/films/:id', (req, res) => {
+//GET user/:id
+router.get('/users/:id', (req, res) => {
   const id = req.params.id;
-  filmQueries.getFilmById(id)
-    .then((film) => {
-      res.render('film:', {film});
+  userQueries.getUserById(id)
+    .then((user) => {
+      res.render('user:', {user});
     });
 });
 

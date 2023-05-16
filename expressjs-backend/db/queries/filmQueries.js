@@ -13,7 +13,7 @@ const getFilmById = (id) => {
     });
 };
 const getFilmByName = (name) => {
-  return db.query('SELECT * FROM films WHERE email = $1;', [name])
+  return db.query('SELECT * FROM films WHERE name = $1;', [name])
     .then(data => {
       return data.rows[0];
     });
