@@ -12,7 +12,7 @@ const reviewQueries = require('../db/queries/reviewQueries');
 //GET films
 router.get('/', (req, res) => {
   console.log("router get request for /reviews")
-  reviewQueries.getreviews()
+  reviewQueries.getReviews()
     .then(reviews => {
       res.render('reviews' , {reviews});
     })

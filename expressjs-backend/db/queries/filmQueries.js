@@ -3,6 +3,7 @@ const db = require('../connection');
 const getFilms = () => {
   return db.query('SELECT * FROM films;')
     .then(data => {
+      console.log("from film queries:", data.rows)
       return data.rows;
     });
 };

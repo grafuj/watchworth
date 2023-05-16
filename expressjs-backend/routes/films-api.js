@@ -14,6 +14,7 @@ router.get('/', (req, res) => {
   console.log("router get request for /films")
   filmQueries.getFilms()
     .then(films => {
+      console.log("films:", films)
       res.render('films' , {films});
     })
     .catch(err => {

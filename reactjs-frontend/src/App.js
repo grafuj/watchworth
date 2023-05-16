@@ -3,6 +3,7 @@ import axios from "axios";
 import { Routes, Route, BrowserRouter } from "react-router-dom"; //BrowserRouter
 import './App.css';
 import Dashboard from "./components/Dashboard";
+import Films from "./components/Films";
 
 function App() {
   const [state, setState] = useState({
@@ -20,8 +21,6 @@ function App() {
         const films = all[0].data;
         const users = all[1].data;
         const reviews = all[2].data;
-        // const users = {id: "user"} //remove once pages are made
-        // const reviews = {id: "review"} //remove once pages are made
         console.log("films:", films, "users:", users, "reviews:", reviews);
         setState((prev) => ({ ...prev, films, users, reviews }));
       })
@@ -41,8 +40,16 @@ function App() {
             reviews={state.reviews}
           />}
         >
-
         </Route>
+        <Route path="/films" element={
+          <Films
+            films={state.films}
+            users={state.users}
+            reviews={state.reviews}
+          />}
+        >
+        </Route>
+
       </Routes>
       <div className="App">
         <header className="App-header">
