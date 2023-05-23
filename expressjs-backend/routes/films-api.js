@@ -14,8 +14,8 @@ router.get('/', (req, res) => {
   console.log("router get request for /films")
   filmQueries.getFilms()
     .then(films => {
-      console.log("films:", films)
-      res.render('films' , {films});
+      console.log("films:line 17 on films-api.js", films)
+      res.json(films);
     })
     .catch(err => {
       res
@@ -25,11 +25,11 @@ router.get('/', (req, res) => {
 });
 
 //GET film/:id
-router.get('/films/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   const id = req.params.id;
   filmQueries.getFilmById(id)
     .then((film) => {
-      res.render('film:', {film});
+      res.json(film);
     });
 });
 

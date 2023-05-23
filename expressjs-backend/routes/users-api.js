@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
   console.log("router get request for /users")
   userQueries.getUsers()
     .then(users => {
-      res.render('users' , {users});
+      res.json(users);
     })
     .catch(err => {
       res
@@ -24,11 +24,11 @@ router.get('/', (req, res) => {
 });
 
 //GET user/:id
-router.get('/users/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   const id = req.params.id;
   userQueries.getUserById(id)
     .then((user) => {
-      res.render('user:', {user});
+      res.json(user);
     });
 });
 

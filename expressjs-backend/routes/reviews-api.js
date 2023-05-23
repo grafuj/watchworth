@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
   console.log("router get request for /reviews")
   reviewQueries.getReviews()
     .then(reviews => {
-      res.render('reviews' , {reviews});
+      res.json(reviews);
     })
     .catch(err => {
       res
@@ -24,11 +24,11 @@ router.get('/', (req, res) => {
 });
 
 //GET review/:id
-router.get('/reviews/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   const id = req.params.id;
   reviewQueries.getreviewById(id)
     .then((review) => {
-      res.render('review:', {review});
+      res.json(review);
     });
 });
 
