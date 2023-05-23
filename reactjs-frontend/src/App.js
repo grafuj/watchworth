@@ -3,7 +3,10 @@ import axios from "axios";
 import { Routes, Route, BrowserRouter, Link } from "react-router-dom"; //BrowserRouter
 import Dashboard from "./components/Dashboard";
 import Films from "./components/Films";
+import Reviews from "./components/Reviews";
+import Users from "./components/Users";
 import Nav from "./components/Nav";
+
 
 export default function App() {
   const [state, setState] = useState({
@@ -50,7 +53,7 @@ export default function App() {
         >
         </Route>
         <Route path="/reviews" element={
-          <Films
+          <Reviews
             films={state.films}
             users={state.users}
             reviews={state.reviews}
@@ -58,7 +61,7 @@ export default function App() {
         >
         </Route>
         <Route path="/users" element={
-          <Films
+          <Users
             films={state.films}
             users={state.users}
             reviews={state.reviews}
