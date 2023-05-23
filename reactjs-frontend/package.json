@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "morgan": "^1.10.0",
+    "node-sass": "^7.0.3",
     "nodemon": "^2.0.22",
     "pg": "^8.10.0",
     "react": "^18.2.0",
@@ -22,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "local": "./node_modules/.bin/nodemon -L --ignore public/"
+    "local": "./node_modules/.bin/nodemon -L --ignore public/",
+    "sass": "node-sass src/styles/sass/main.scss src/styles/css/style.css -w"
   },
   "eslintConfig": {
     "extends": [

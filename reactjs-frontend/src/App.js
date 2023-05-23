@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Routes, Route, BrowserRouter } from "react-router-dom"; //BrowserRouter
-import './App.css';
+import { Routes, Route, BrowserRouter, Link } from "react-router-dom"; //BrowserRouter
 import Dashboard from "./components/Dashboard";
 import Films from "./components/Films";
+import Nav from "./components/Nav";
 
-function App() {
+export default function App() {
   const [state, setState] = useState({
     folders: [],
     departments: [],
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <p>Nav placeholder</p>
+      <Nav />
       <Routes>
         <Route path="/" element={
           <Dashboard
@@ -49,16 +49,32 @@ function App() {
           />}
         >
         </Route>
+        <Route path="/reviews" element={
+          <Films
+            films={state.films}
+            users={state.users}
+            reviews={state.reviews}
+          />}
+        >
+        </Route>
+        <Route path="/users" element={
+          <Films
+            films={state.films}
+            users={state.users}
+            reviews={state.reviews}
+          />}
+        >
+        </Route>
 
       </Routes>
       <div className="App">
         <header className="App-header">
           <h1>Watchworth</h1>
-          <a href="/films">Bring Me Films</a>
+          <Link to={"/films"}><p>Films</p></Link>
+          <Link to={"/reviews"}><p>Reviews</p></Link>
+          <Link to={"/users"}><p>Users</p></Link>
         </header>
       </div>
     </BrowserRouter>
   );
 }
-
-export default App;

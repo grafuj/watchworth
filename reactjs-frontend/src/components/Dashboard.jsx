@@ -8,20 +8,7 @@ export default function Dashboard(props) {
   return (
     <>
       <h1>Dashboard!</h1>
-      <span>
-        {/* {films.map((film) => {
-          const route = `/films/${film.id}`;
-          return (
-            <Link
-              key={film.id}
-              to={route}
-              state={{ film: film }}
-            >
-              <p>{film.name}</p>
-            </Link>
-          );
-        })} */}
-      </span>
+      <h3>My Reviews</h3>
     </>
   );
 }

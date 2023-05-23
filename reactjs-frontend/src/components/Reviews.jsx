@@ -4,20 +4,29 @@ import { Link } from "react-router-dom";
 
 export default function Films(props) {
   const { films, users, reviews } = props;
-  console.log("films inside component Films:", films)
   return (
     <>
       <h1>Films!</h1>
       <span>
-        {films && films.map((film) => {
-          const route = `/films/${film.id}`;
+        {reviews && reviews.map((review) => {
+          const route = `/reviews/${review.id}`;
+          const filmID = review.film_id;
           return (
             <Link
-              key={film.id}
+              key={review.id}
               to={route}
-              state={{ film: film }}
+              state={{ review: review }}
             >
-              <p>{film.name}</p>
+              <p>
+                {films.find(film => {
+                  film.id == filmID;
+                  return film.name;
+                })}
+
+              </p>
+              <p>{review.film_id}</p>
+              <p>{review.film_id}</p>
+              <p>By: {review.user_id}</p>
             </Link>
           );
         })}
