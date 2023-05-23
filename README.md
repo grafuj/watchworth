@@ -2,6 +2,17 @@
 
 A bold idea to allow for subjective film preferences and allow connections to be made around film
 
+## Setup
+
+This is an app that runs on Node, PostgreSQL, Express and React.
+
+1. Clone the repository: `git clone git@github.com:[user]/watchworth.git watchworth`
+2. Install the backend's dependencies in the backend project directory: `cd expressjs-backend` and `npm install`
+3. Setup and seed the database with `npm run db:reset`
+4. Start the backend server: `npm start`
+5. Install the frontend's dependencies in the frontend project directory: `cd reactjs-frontend` and `npm install`
+6. Start the frontend server: `npm start`
+
 ## Available Scripts
 
 In the project directory, you can run:
