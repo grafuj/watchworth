@@ -73,8 +73,8 @@ export default function App() {
           </Route>
           <Route path="*" element={<Empty />}></Route>
         </Routes>
-        <Footer />
       </main>
+      <Footer />
     </BrowserRouter>
   );
 }

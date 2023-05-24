@@ -1,9 +1,15 @@
 footer-container {
   position: relative;
-  height: 100px;
+  display: flex;
+  justify-content: center;
+  background-color: green;
 }
 
 footer-content {
-  bottom: 5px;
   position: absolute;
+  bottom: 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }

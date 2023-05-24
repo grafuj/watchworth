@@ -45,6 +45,15 @@ test {
   border-color: #48dbfb; }
 
 footer-container {
-  position: fixed;
-  bottom: 0px;
-  height: 100px; }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: green; }
+
+footer-content {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center; }
