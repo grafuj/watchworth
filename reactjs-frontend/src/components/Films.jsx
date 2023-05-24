@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 export default function Films(props) {
   const { films, users, reviews } = props;
   console.log("films inside component Films:", films)
