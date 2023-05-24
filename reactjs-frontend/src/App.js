@@ -6,7 +6,7 @@ import Films from "./components/Films";
 import Reviews from "./components/Reviews";
 import Users from "./components/Users";
 import Nav from "./components/Nav";
-
+import './styles/css/style.css';
 
 export default function App() {
   const [state, setState] = useState({
@@ -35,6 +35,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Nav />
+      <main className="main-window-space">
       <Routes>
         <Route path="/" element={
           <Dashboard
@@ -68,16 +69,14 @@ export default function App() {
           />}
         >
         </Route>
-
       </Routes>
-      <div className="App">
-        <header className="App-header">
-          <h1>Watchworth</h1>
-          <Link to={"/films"}><p>Films</p></Link>
-          <Link to={"/reviews"}><p>Reviews</p></Link>
-          <Link to={"/users"}><p>Users</p></Link>
-        </header>
-      </div>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <a>This site is for film evaluation</a>
+      </main>
     </BrowserRouter>
   );
 }
