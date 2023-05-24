@@ -16,7 +16,7 @@ export default function Films(props) {
               to={route}
               state={{ user: user }}
             >
-              <p>{user.name}</p>
+              <p>{user.username}</p>
             </Link>
           );
         })}
