@@ -20,7 +20,8 @@ export default function Films(props) {
               state={{ review: review }}
             >
             <p>{myFilm.name}</p>
-            <p>By: {myUser.name}</p>
+            <p>keys: {myUser.id} {myUser.password}</p>
+            <p>By: {myUser.username}</p>
             </Link>
           );
         })}
