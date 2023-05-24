@@ -6,6 +6,7 @@ import Films from "./components/Films";
 import Reviews from "./components/Reviews";
 import Users from "./components/Users";
 import Nav from "./components/Nav";
+import Empty from "./components/Empty";
 import './styles/css/style.css';
 
 export default function App() {
@@ -36,46 +37,47 @@ export default function App() {
     <BrowserRouter>
       <Nav />
       <main className="main-window-space">
-      <Routes>
-        <Route path="/" element={
-          <Dashboard
-            films={state.films}
-            users={state.users}
-            reviews={state.reviews}
-          />}
-        >
-        </Route>
-        <Route path="/films" element={
-          <Films
-            films={state.films}
-            users={state.users}
-            reviews={state.reviews}
-          />}
-        >
-        </Route>
-        <Route path="/reviews" element={
-          <Reviews
-            films={state.films}
-            users={state.users}
-            reviews={state.reviews}
-          />}
-        >
-        </Route>
-        <Route path="/users" element={
-          <Users
-            films={state.films}
-            users={state.users}
-            reviews={state.reviews}
-          />}
-        >
-        </Route>
-      </Routes>
+        <Routes>
+          <Route path="/" element={
+            <Dashboard
+              films={state.films}
+              users={state.users}
+              reviews={state.reviews}
+            />}
+          >
+          </Route>
+          <Route path="/films" element={
+            <Films
+              films={state.films}
+              users={state.users}
+              reviews={state.reviews}
+            />}
+          >
+          </Route>
+          <Route path="/reviews" element={
+            <Reviews
+              films={state.films}
+              users={state.users}
+              reviews={state.reviews}
+            />}
+          >
+          </Route>
+          <Route path="/users" element={
+            <Users
+              films={state.films}
+              users={state.users}
+              reviews={state.reviews}
+            />}
+          >
+          </Route>
+          <Route path="*" element={<Empty />}></Route>
+        </Routes>
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <a>This site is for film evaluation</a>
+        <br />
+        <br />
+        <br />
+        <br />
+        <a>This site is for film evaluation</a>
       </main>
     </BrowserRouter>
   );
