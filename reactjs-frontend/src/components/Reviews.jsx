@@ -11,18 +11,17 @@ export default function Films(props) {
         {reviews && reviews.map((review) => {
           const route = `/reviews/${review.id}`;
           const filmID = review.film_id;
-          const myFilm = films.find(film => film.id === filmID)
-          const myUser = users.find(user => user.id === review.user_id)
+          const myFilm = films.find(film => film.id === filmID);
+          const myUser = users.find(user => user.id === review.user_id);
           return (
-            <Link
-              key={review.id}
-              to={route}
-              state={{ review: review }}
-            >
-            <p>{myFilm.name}</p>
-            <p>keys: {myUser.id} {myUser.password}</p>
-            <p>By: {myUser.username}</p>
-            </Link>
+            <span>
+              <Link key={review.id} to={route} state={{ review: review }}>
+                <p>{myFilm.name}</p>
+              </Link>
+              <Link to={`/users/${myUser.id}`}>
+                <p>By: {myUser.username}</p>
+              </Link>
+            </span>
           );
         })}
       </span>
