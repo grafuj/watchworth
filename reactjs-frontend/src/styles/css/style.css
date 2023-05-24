@@ -43,3 +43,8 @@ test {
   border: 3px solid;
   border-radius: 8px;
   border-color: #48dbfb; }
+
+footer-container {
+  position: fixed;
+  bottom: 0px;
+  height: 100px; }

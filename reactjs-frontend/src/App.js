@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Routes, Route, BrowserRouter, Link } from "react-router-dom"; //BrowserRouter
+import './styles/css/style.css';
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import Films from "./components/Films";
 import Reviews from "./components/Reviews";
 import Users from "./components/Users";
 import Nav from "./components/Nav";
 import Empty from "./components/Empty";
-import './styles/css/style.css';
+import Footer from "./components/Footer";
 
 export default function App() {
   const [state, setState] = useState({
@@ -72,12 +73,7 @@ export default function App() {
           </Route>
           <Route path="*" element={<Empty />}></Route>
         </Routes>
-
-        <br />
-        <br />
-        <br />
-        <br />
-        <a>This site is for film evaluation</a>
+        <Footer />
       </main>
     </BrowserRouter>
   );
