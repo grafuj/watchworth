@@ -9,12 +9,13 @@ import Users from "./components/Users";
 import Nav from "./components/Nav";
 import Empty from "./components/Empty";
 import Footer from "./components/Footer";
+import Film from "./components/Film";
 
 export default function App() {
   const [state, setState] = useState({
-    folders: [],
-    departments: [],
-    items: [],
+    films: [],
+    reviews: [],
+    users: [],
   });
   useEffect(() => {
     Promise.all([
@@ -26,7 +27,7 @@ export default function App() {
         const films = all[0].data;
         const users = all[1].data;
         const reviews = all[2].data;
-        console.log("films:", films, "users:", users, "reviews:", reviews);
+        // console.log("films:", films, "users:", users, "reviews:", reviews);
         setState((prev) => ({ ...prev, films, users, reviews }));
       })
       .catch((error) => {
@@ -49,6 +50,14 @@ export default function App() {
           </Route>
           <Route path="/films" element={
             <Films
+              films={state.films}
+              users={state.users}
+              reviews={state.reviews}
+            />}
+          >
+          </Route>
+          <Route path="/film/:id" element={
+            <Film
               films={state.films}
               users={state.users}
               reviews={state.reviews}

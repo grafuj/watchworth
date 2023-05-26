@@ -6,7 +6,7 @@ export default function Films(props) {
   const { films, users, reviews } = props;
   return (
     <>
-      <h1>Films!</h1>
+      <h1>Reviews!</h1>
       <span>
         {reviews && reviews.map((review) => {
           const route = `/reviews/${review.id}`;
