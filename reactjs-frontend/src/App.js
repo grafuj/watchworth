@@ -10,6 +10,7 @@ import Nav from "./components/Nav";
 import Empty from "./components/Empty";
 import Footer from "./components/Footer";
 import Film from "./components/Film";
+import Review from "./components/Review";
 
 export default function App() {
   const [state, setState] = useState({
@@ -66,6 +67,14 @@ export default function App() {
           </Route>
           <Route path="/reviews" element={
             <Reviews
+              films={state.films}
+              users={state.users}
+              reviews={state.reviews}
+            />}
+          >
+          </Route>
+          <Route path="/review/:id" element={
+            <Review
               films={state.films}
               users={state.users}
               reviews={state.reviews}
