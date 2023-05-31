@@ -14,10 +14,10 @@ export default function Review(props) {
 
   useEffect(() => {
     if (reviews) {
-      const myReview = reviews.find(review => review.id === reviewID);
+      const myReview = reviews.find((review) => review.id === reviewID);
       if (myReview) {
-        const myFilm = films.find(film => film.id === myReview.film_id);
-        const myUser = users.find(user => user.id === myReview.user_id);
+        const myFilm = myReview.film_id ? films.find((film) => film.id === myReview.film_id) : null;
+        const myUser = users.find((user) => user.id === myReview.user_id);
         setState({ myReview, myFilm, myUser });
       }
     }
