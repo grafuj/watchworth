@@ -6,17 +6,17 @@ export default function Films(props) {
   const { films, users, reviews } = props;
   return (
     <>
-      <h1>Films!</h1>
+      <h1>Users!</h1>
       <span>
-        {films && films.map((film) => {
-          const route = `/films/${film.id}`;
+        {users && users.map((user) => {
+          const route = `/user/${user.id}`;
           return (
             <Link
-              key={film.id}
+              key={user.id}
               to={route}
-              state={{ film: film }}
+              state={{ user: user }}
             >
-              <p>{film.name}</p>
+              <p>{user.username}</p>
             </Link>
           );
         })}
