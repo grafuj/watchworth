@@ -17,7 +17,7 @@ export default function Films(props) {
               <Link to={route} state={{ review: review }}>
                 <p>Review of {myFilm.name}</p>
               </Link>
-              <Link to={`/users/${myUser.id}`}>
+              <Link to={`/user/${myUser.id}`}>
                 <p>By: {myUser.username}</p>
               </Link>
             </span>

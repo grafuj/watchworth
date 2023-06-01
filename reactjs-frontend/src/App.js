@@ -11,6 +11,7 @@ import Empty from "./components/Empty";
 import Footer from "./components/Footer";
 import Film from "./components/Film";
 import Review from "./components/Review";
+import User from "./components/User";
 
 export default function App() {
   const [state, setState] = useState({
@@ -83,6 +84,14 @@ export default function App() {
           </Route>
           <Route path="/users" element={
             <Users
+              films={state.films}
+              users={state.users}
+              reviews={state.reviews}
+            />}
+          >
+          </Route>
+          <Route path="/user/:id" element={
+            <User
               films={state.films}
               users={state.users}
               reviews={state.reviews}

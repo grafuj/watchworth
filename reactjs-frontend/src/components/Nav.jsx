@@ -16,7 +16,7 @@ export default function Nav(props) {
       </span>
       <span className="nav-options">
         <Link to="/settings" className="site-logo-text">Settings</Link>
-        <Link to="/users/1" className="site-logo-text">User</Link>
+        <Link to="/user/1" className="site-logo-text">User</Link>
         <Link to="/logout" className="site-logo-text">Logout</Link>
       </span>
     </nav>
