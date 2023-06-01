@@ -5,7 +5,7 @@ export default function User(props) {
   const { films, users, reviews } = props;
   const [state, setState] = useState({
     userReviews: [],
-    user: {}
+    myUser: {}
   });
 
   let params = useParams();
@@ -23,7 +23,7 @@ export default function User(props) {
 
   return (
     <>
-    <h1>{state.myUser.username}</h1>
+    <h1>{state.myUser && state.myUser.username}</h1>
       {state.userReviews.length > 0 ? (
         <>
           {state.userReviews.map((review) => {

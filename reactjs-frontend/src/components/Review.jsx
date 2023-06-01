@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 export default function Review(props) {
   const { films, users, reviews } = props;
@@ -31,6 +31,7 @@ export default function Review(props) {
       {state.myFilm && state.myUser && state.myReview ? (
         <>
           <h1>{state.myFilm.name}</h1>
+          <Link to="">{state.myFilm.name}</Link>
           <p>Author: {state.myUser.username}</p>
           <table>
             <thead>
