@@ -1,6 +1,6 @@
 const db = require('../connection');
 
-//this will be the sql code that calculates the average based on the eight scores and adds it to the `overall_score` column.
+//this will be the sql code that calculates the average based on the eight scores and adds it to the `overall_score` column. Ideally, this conditionally checks if it has been calculated before and only calculates it if it is missing.
 const computerOverallScore = function(val) {
   return db.query(`
   INSERT INTO reviews (username, url, email, password, category)
