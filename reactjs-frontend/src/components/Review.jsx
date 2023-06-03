@@ -21,17 +21,20 @@ export default function Review(props) {
         console.log("got into myReview");
         const myFilm = myReview.film_id ? films.find((film) => film.id === myReview.film_id) : null;
         const myUser = users.find((user) => user.id === myReview.user_id);
-        setState({ myReview, myFilm, myUser });
+        const authorRoute = `/user/${myUser.id}`;
+        const filmRoute = `/film/${myFilm.id}`;
+        setState({ myReview, myFilm, myUser, authorRoute, filmRoute });
       }
     }
   }, [films, reviews, users, reviewID]);
+
 
   return (
     <>
       {state.myFilm && state.myUser && state.myReview ? (
         <>
           <h1>{state.myFilm.name}</h1>
-          <Link to="">{state.myFilm.name}</Link>
+          <Link to={state.authorRoute}>{state.myFilm.name}</Link>
           <p>Author: {state.myUser.username}</p>
           <table>
             <thead>
