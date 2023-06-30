@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import Film from "./components/Film";
 import Review from "./components/Review";
 import User from "./components/User";
+import About from "./components/About";
 
 export default function App() {
   const [state, setState] = useState({
@@ -44,6 +45,14 @@ export default function App() {
         <Routes>
           <Route path="/" element={
             <Dashboard
+              films={state.films}
+              users={state.users}
+              reviews={state.reviews}
+            />}
+          >
+          </Route>
+          <Route path="/about" element={
+            <About
               films={state.films}
               users={state.users}
               reviews={state.reviews}
