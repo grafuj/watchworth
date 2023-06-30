@@ -15,7 +15,8 @@ export default function Film(props) {
 
   useEffect(() => {
     if (films) {
-      setMyFilm(films.find(film => film.id == filmID)); //types are different
+      // console.log("typeof filmID", typeof filmID)
+      setMyFilm(films.find(film => film.id.toString() === filmID)); //types are different
       // console.log(myFilm.name) //blank first time, populated on re-render
     }
   }, [films]);
