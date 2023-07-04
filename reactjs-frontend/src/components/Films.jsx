@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Editmodal from "./Forms/Editmodal";
+import Form from "./Forms/Form";
 
 export default function Films(props) {
   const { films, users, reviews } = props;
