@@ -7,6 +7,11 @@ export default function Films(props) {
   return (
     <>
       <h1>Films!</h1>
+      <p>Add a film!</p>
+      <form>
+        <h6>Name:</h6>
+        
+      </form>
       <span>
         {films && films.map((film) => {
           const route = `/film/${film.id}`;
