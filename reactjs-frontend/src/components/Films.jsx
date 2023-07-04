@@ -1,17 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Editmodal from "./Forms/Editmodal";
 
 export default function Films(props) {
   const { films, users, reviews } = props;
-  // console.log("films inside component Films:", films)
+  const [show, setShow] = useState(false);
+
+
   return (
     <>
       <h1>Films!</h1>
       <p>Add a film!</p>
-      <form>
-        <h6>Name:</h6>
-        
-      </form>
+      <Editmodal className="nav-modal" onClose={() => setShow(false)} show={show}>
+        <Form
+          films={films}
+          users={users}
+          onClose={() => setShow(false)}
+          reviews={reviews}
+        />
+      </Editmodal>
       <span>
         {films && films.map((film) => {
           const route = `/film/${film.id}`;
