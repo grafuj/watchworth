@@ -37,6 +37,24 @@ const Form = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    // alerts the user to select a name before saving the form
+    if (!film.name) {
+      alert("Please select a name before saving!");
+      return;
+    }
+
+    // Submits form data to the backend if there is no item id associated
+    if (!filmID) {
+      try {
+        const response = await fetch("/api/films", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            film: {...}
+        })
+      }
+    }
   }
 
   return (
