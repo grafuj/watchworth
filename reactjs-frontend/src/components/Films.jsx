@@ -4,7 +4,11 @@ import Editmodal from "./Forms/Editmodal";
 import Form from "./Forms/Form";
 
 export default function Films(props) {
-  const { films, users, reviews } = props;
+  const [state, setState] = useState({
+    films: null,
+    reviews: null,
+    users: null,
+  });
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -12,9 +16,10 @@ export default function Films(props) {
     // Simulating an asynchronous data fetch
     setTimeout(() => {
       // Assuming data is fetched successfully
+      setState({ films, users, reviews });
       setLoading(false);
-    }, 3000); // Simulating a 2-second delay
-  }, []);
+    }, 2000); // Simulating a 2-second delay
+  }, [films, users, reviews]);
 
   if (loading) {
     return <p>Loading...</p>;
