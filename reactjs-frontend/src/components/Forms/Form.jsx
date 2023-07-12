@@ -11,12 +11,6 @@ import CancelButton from "../Hooks/CancelButton";
 
 const Form = (props) => {
   const location = useLocation();
-  const [formData, setFormData] = useState({
-    name: film?.name || "",
-    imdb_url: film?.imdb_url || "",
-    release_date: film?.release_date || "",
-    genre: film?.genre || "",
-  });
 
   let film = "";
   if (!location.state) {
@@ -24,6 +18,14 @@ const Form = (props) => {
   } else {
     film = location.state.item;
   }
+  
+  const [formData, setFormData] = useState({
+    name: film?.name || "",
+    imdb_url: film?.imdb_url || "",
+    release_date: film?.release_date || "",
+    genre: film?.genre || "",
+  });
+
 
   const formRef = useRef();
 
