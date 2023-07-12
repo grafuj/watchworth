@@ -16,9 +16,9 @@ import About from "./components/About";
 
 export default function App() {
   const [state, setState] = useState({
-    films: [],
-    reviews: [],
-    users: [],
+    films: null,
+    reviews: null,
+    users: null,
   });
   useEffect(() => {
     Promise.all([
