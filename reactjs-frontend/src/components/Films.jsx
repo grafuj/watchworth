@@ -7,11 +7,11 @@ export default function Films(props) {
   const { films, users, reviews } = props;
   const [show, setShow] = useState(false);
 
-
   return (
     <>
       <h1>Films!</h1>
       <p>Add a film!</p>
+
       <Editmodal className="nav-modal" onClose={() => setShow(false)} show={show}>
         <Form
           films={films}
@@ -21,7 +21,7 @@ export default function Films(props) {
         />
       </Editmodal>
       <span>
-        {films && films.map((film) => {
+        {waitForDatabaseResponse() && films.map((film) => {
           const route = `/film/${film.id}`;
           return (
             <Link
