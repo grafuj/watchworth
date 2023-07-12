@@ -12,6 +12,8 @@ export default function User(props) {
   const userID = params.id;
   console.log(userID, "userID")
 
+  
+
   useEffect(() => {
     if (reviews) {
       const userReviews = reviews.filter((review) => review.user_id.toString() === userID);
