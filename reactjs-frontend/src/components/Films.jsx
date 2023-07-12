@@ -18,7 +18,7 @@ export default function Films(props) {
     setTimeout(() => {
       // Assuming data is fetched successfully
       setLoading(false);
-    }, 150); // Simulating a 2-second delay
+    }, 150); // Simulating a small delay
   }, []);
 
   if (loading) {
