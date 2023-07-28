@@ -34,7 +34,7 @@ export default function Films(props) {
         />
       </Editmodal>
       <span>
-        {films.length > 0 ? (
+        {films && films.length > 0 ? (
           films.map((film) => {
             const route = `/film/${film.id}`;
             return (
