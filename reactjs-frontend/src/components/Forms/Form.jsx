@@ -93,7 +93,7 @@ const Form = (props) => {
       <div className="notes-input">
         <label>
           Release Date: 
-          <textarea
+          <input
             name="release_date"
             value={formData.release_date}
             onChange={handleInputChange}
@@ -104,7 +104,7 @@ const Form = (props) => {
       <div className="notes-input">
         <label>
           Genre:
-          <textarea
+          <input
             name="genre"
             value={formData.genre}
             onChange={handleInputChange}
