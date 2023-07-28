@@ -83,7 +83,7 @@ const Form = (props) => {
           IMDb URL:
           <input
             type="text"
-            name="imdb-url"
+            name="imdb_url"
             value={formData.imdb_url}
             onChange={handleInputChange}
           />
@@ -94,7 +94,7 @@ const Form = (props) => {
         <label>
           Release Date: 
           <textarea
-            name="release date"
+            name="release_date"
             value={formData.release_date}
             onChange={handleInputChange}
           />

@@ -5,11 +5,6 @@ import Form from "./Forms/Form";
 
 export default function Films(props) {
   const { films, users, reviews } = props;
-  const [state, setState] = useState({
-    films: null,
-    reviews: null,
-    users: null,
-  });
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -43,11 +38,7 @@ export default function Films(props) {
           films.map((film) => {
             const route = `/film/${film.id}`;
             return (
-              <Link
-                key={film.id}
-                to={route}
-                state={{ film: film }}
-              >
+              <Link key={film.id} to={route} state={{ film: film }}>
                 <p>{film.name}</p>
               </Link>
             );
