@@ -12,10 +12,12 @@ export default function User(props) {
   const userID = params.id;
   console.log(userID, "userID")
 
+  
+
   useEffect(() => {
     if (reviews) {
-      const userReviews = reviews.filter((review) => review.user_id == userID);
-      const myUser = users.find(user => user.id == userID);
+      const userReviews = reviews.filter((review) => review.user_id.toString() === userID);
+      const myUser = users.find(user => user.id.toString() === userID);
       console.log("filtered reviews for user", userReviews, "user ID to filter:", userID);
       setState({userReviews, myUser});
     }

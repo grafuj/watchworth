@@ -15,7 +15,7 @@ export default function Review(props) {
   useEffect(() => {
     if (reviews) {
       console.log("inside reviews");
-      const myReview = reviews.find((review) => review.id == reviewID);
+      const myReview = reviews.find((review) => review.id.toString() === reviewID);
       console.log("got review", myReview, "id to look for:", reviewID);
       if (myReview) {
         console.log("got into myReview");
