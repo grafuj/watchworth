@@ -80,23 +80,33 @@ const Form = (props) => {
       </div>
       <div>
         <label>
-          IMDb Link:
+          IMDb URL:
           <input
             type="text"
-            name="imdb-url"
-            value={formData.name}
+            name="imdb_url"
+            value={formData.imdb_url}
             onChange={handleInputChange}
           />
         </label>
       </div>
 
+      <div className="notes-input">
+        <label>
+          Release Date: 
+          <input
+            name="release_date"
+            value={formData.release_date}
+            onChange={handleInputChange}
+          />
+        </label>
+      </div>
 
       <div className="notes-input">
         <label>
-          Notes:
-          <textarea
-            name="description"
-            value={formData.description}
+          Genre:
+          <input
+            name="genre"
+            value={formData.genre}
             onChange={handleInputChange}
           />
         </label>
