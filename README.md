@@ -2,6 +2,8 @@
 
 A bold idea to allow for subjective film preferences and allow connections to be made around film
 
+[Hosted](https://watchworth-production.up.railway.app/)
+
 ## Setup
 
 This is an app that runs on Node, PostgreSQL, Express and React.
