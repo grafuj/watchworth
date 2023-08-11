@@ -14,6 +14,9 @@ import Review from "./components/Review";
 import User from "./components/User";
 import About from "./components/About";
 
+const DBURL = "https://watchworth-pgdb.up.railway.app"
+
+
 export default function App() {
   const [state, setState] = useState({
     films: null,
@@ -22,9 +25,9 @@ export default function App() {
   });
   useEffect(() => {
     Promise.all([
-      axios.get("/api/films"),
-      axios.get("/api/users"),
-      axios.get("/api/reviews"),
+      axios.get(`${DBURL}/api/films`),
+      axios.get(`${DBURL}/api/users`),
+      axios.get(`${DBURL}/api/reviews`),
     ])
       .then((all) => {
         const films = all[0].data;

@@ -4,7 +4,9 @@ export default function checkForDBResponse(input) {
   let isObject = typeof input === 'object';
 
   if (typeof input === 'object') {
-    if ()
+    if (input.length > 0){
+      return true
+    }
 
   } else if (typeof input === 'array') {
     if (input.length > 0) {
