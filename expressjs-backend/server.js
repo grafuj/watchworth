@@ -55,7 +55,7 @@ app.use('/api/users', userApiRoutes);
 
 app.get('/', (req, res) => {
   console.log("here: testing where this appears")
-  res.json("index");
+  res.json("this is res.json displaying that watchworth backend server is up and awaiting requests");
 });
 
 // app.use('*', passwordApiRoutes);
