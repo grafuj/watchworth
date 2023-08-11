@@ -55,7 +55,7 @@ app.use('/api/users', userApiRoutes);
 
 app.get('/', (req, res) => {
   console.log("here: testing where this appears")
-  res.render("index");
+  res.json("index");
 });
 
 // app.use('*', passwordApiRoutes);
